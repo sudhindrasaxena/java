@@ -1,4 +1,4 @@
-package com.sudhindra.hibernatespringboot;
+package com.sudhindra.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,5 +12,4 @@ public class HibernateSpringbootApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
