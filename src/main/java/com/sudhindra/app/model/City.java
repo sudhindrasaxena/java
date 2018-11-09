@@ -26,7 +26,7 @@ public class City {
 
 	public City() {
 	}
-	
+
 	/**
 	 * @param name
 	 * @param countryCode
@@ -44,7 +44,7 @@ public class City {
 	 * @return the id
 	 */
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
@@ -116,7 +116,9 @@ public class City {
 		this.info = info;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -124,7 +126,45 @@ public class City {
 		return String.format("City [id=%s, name=%s, countryCode=%s, district=%s, info=%s]", id, name, countryCode,
 				district, info);
 	}
-	
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof City)) {
+			return false;
+		}
+		City other = (City) obj;
+		if (name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!name.equals(other.name)) {
+			return false;
+		}
+		return true;
+	}
 
 }
