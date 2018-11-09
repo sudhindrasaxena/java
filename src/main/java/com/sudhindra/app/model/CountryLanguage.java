@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sudhindra.hibernatespringboot.entity;
+package com.sudhindra.app.model;
 
 /**
  * @author Sudhindra

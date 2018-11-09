@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sudhindra.hibernatespringboot.exception;
+package com.sudhindra.app.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.sudhindra.hibernatespringboot;
+package com.sudhindra.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
