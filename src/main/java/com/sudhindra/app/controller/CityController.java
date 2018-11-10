@@ -23,18 +23,18 @@ import com.sudhindra.app.service.ICityService;
  *
  */
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/city")
 public class CityController {
 	
 	@Autowired
 	private ICityService cityService;
 	
-	@GetMapping("/cities")
+	@GetMapping("/listcity")
 	public List<City> getCities() {
 		return cityService.getAllCities();
 	}
 
-	@GetMapping("/cities/{id}")
+	@GetMapping("/listcity/{id}")
 	public ResponseEntity<City> getCityById(@PathVariable(value = "id") Long cityId)
 			throws ResourceNotFoundException {
 		City city = cityService.getCity(cityId)
