@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class Country {
 	private String code;
 	private String name;
-	private long capital;
+	private Integer capital;
 	private String code2;
 
 	public Country() {
@@ -29,7 +29,7 @@ public class Country {
 	 * @param capital
 	 * @param code2
 	 */
-	public Country(String code, String name, long capital, String code2) {
+	public Country(String code, String name, Integer capital, String code2) {
 		this.code = code;
 		this.name = name;
 		this.capital = capital;
@@ -70,15 +70,15 @@ public class Country {
 	/**
 	 * @return the capital
 	 */
-	@Column(name="capital")
-	public long getCapital() {
+	@Column(name="capital",nullable=true)
+	public Integer getCapital() {
 		return capital;
 	}
 
 	/**
 	 * @param capital the capital to set
 	 */
-	public void setCapital(long capital) {
+	public void setCapital(Integer capital) {
 		this.capital = capital;
 	}
 
