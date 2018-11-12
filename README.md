@@ -1,7 +1,8 @@
 Used following versions in example -  
     <b>1. Java 8 <br>
     2. Spring Boot 2.0.2.RELEASE  
-    3. MySQL 8</b> 
+    3. MySQL 8<br>
+    4. Spring Data JPA</b> 
 
 Database setup scripts can be downloaded from here - 
 https://dev.mysql.com/doc/index-other.html
