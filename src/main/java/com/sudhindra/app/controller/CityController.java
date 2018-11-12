@@ -3,6 +3,8 @@
  */
 package com.sudhindra.app.controller;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,20 +27,25 @@ import com.sudhindra.app.service.ICityService;
 @RestController
 @RequestMapping("/api/city")
 public class CityController {
-	
+
 	@Autowired
 	private ICityService cityService;
-	
+
 	@GetMapping("/listcity")
 	public List<City> getCities() {
 		return cityService.getAllCities();
 	}
 
 	@GetMapping("/listcity/{id}")
-	public ResponseEntity<City> getCityById(@PathVariable(value = "id") Long cityId)
-			throws ResourceNotFoundException {
+	public ResponseEntity<City> getCityById(@PathVariable(value = "id") Long cityId) throws ResourceNotFoundException {
 		City city = cityService.getCity(cityId)
 				.orElseThrow(() -> new ResourceNotFoundException("Result not found for this id :: " + cityId));
 		return ResponseEntity.ok().body(city);
+	}
+
+	@GetMapping("/uptime")
+	public ResponseEntity<String> getUptime() throws ResourceNotFoundException {
+		RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
+		return ResponseEntity.ok().body(String.valueOf(runtimeMXBean.getUptime()));
 	}
 }
