@@ -38,8 +38,7 @@ public class CityController {
 
 	@GetMapping("/listcity/{id}")
 	public ResponseEntity<City> getCityById(@PathVariable(value = "id") Long cityId) throws ResourceNotFoundException {
-		City city = cityService.getCity(cityId)
-				.orElseThrow(() -> new ResourceNotFoundException("Result not found for this id :: " + cityId));
+		City city = cityService.getCity(cityId);
 		return ResponseEntity.ok().body(city);
 	}
 

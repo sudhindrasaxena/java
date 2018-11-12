@@ -40,8 +40,8 @@ public class CityServiceImpl implements ICityService {
 	 * @see com.sudhindra.app.service.ICityService#getCity(java.lang.Long)
 	 */
 	@Override
-	public Optional<City> getCity(Long id) {
-		return cityRepository.findById(id);
+	public City getCity(Long id) {
+		return cityRepository.findById(id).get();
 	}
 
 	/*

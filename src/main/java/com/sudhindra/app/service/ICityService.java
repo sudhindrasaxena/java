@@ -15,7 +15,7 @@ import com.sudhindra.app.model.City;
 public interface ICityService {
 	City addCity(City city);
 
-	Optional<City> getCity(Long id);
+	City getCity(Long id);
 	City editCity(City city);
 
 	void deleteCity(City city);
