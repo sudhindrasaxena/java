@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import com.sudhindra.app.model.City;
 import com.sudhindra.app.model.Country;
 import com.sudhindra.app.repository.CountryRepository;
 
@@ -109,5 +110,11 @@ public class CountryServiceImpl implements ICountryService {
 	public long countCountry() {
 		return countryRepository.count();
 	}
+
+	@Override
+	public List<City> findAllCitiesInCountry(String countrycode) {
+		return null;
+	}
+	
 
 }

@@ -6,6 +6,7 @@ package com.sudhindra.app.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.sudhindra.app.model.City;
 import com.sudhindra.app.model.Country;
 
 /**
@@ -23,6 +24,8 @@ public interface ICountryService {
 
 	List<Country> getAllCountry(int pageNumber, int pageSize);
 	List<Country> getAllCountry();
+	
+	List<City> findAllCitiesInCountry(String countrycode);
 
 	long countCountry();
 }
