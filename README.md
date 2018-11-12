@@ -9,3 +9,10 @@ https://dev.mysql.com/doc/index-other.html
 
 Path for application.properties has to be passed using the below param while starting the server since any cred config should never be part of source code - <br><br>
         <b>--spring.config.location=D:\app_config\application.properties (Windows Location)
+
+Sample application.properties - <br>
+<b><br>
+spring.datasource.url=jdbc:mysql://localhost:3306/database_name<br>
+spring.datasource.username=mysql<br>
+spring.datasource.password=mysql<br>
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
